@@ -1,0 +1,10 @@
+=LAMBDA(
+  mycell, padLen,
+  LET(
+    mylen, LEN(mycell),
+    mytaskno, MID(mycell,3,mylen-2),
+    padcount, padLen-LEN(mytaskno),
+    padzeros,"T-"&REPT("0",padcount),
+    padzeros&mytaskno
+  )
+)
