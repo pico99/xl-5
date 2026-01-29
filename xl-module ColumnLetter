@@ -1,0 +1,5 @@
+Public Function ColumnLetter(col_num As Long) As String
+  ' (0) after the split = array element to return (arrays are 0-based so return the first array element)
+  ' split on $ (RowAbsolute)
+  ColumnLetter = Split(Cells(1, col_num).Address(RowAbsolute:=True, ColumnAbsolute:=False), "$")(0)
+End Function
